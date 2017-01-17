@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="todo">
+<html lang="en" ng-app="ToDo">
   <head>
     <meta charset="utf-8">
 <title>Nearby
@@ -8,7 +8,19 @@
   
 </head>
 <body>
-  <script src="bower_components/angular/angular.min.js"></script>
+  <div ng-controller='todocontroller'>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script>
+    angular.module('ToDo',[]).controller('todocontroller',['$scope',function($scope){
+    $scope.todos=[
+      {'title':'todo list','done':false}
+    ];
+      $scope.addtodo=function(){}
+      $scope.clearCompleted=function(){}
+    }])
+    
+  </script>
 <h1>Search here to know what is near by?!</h1>
   
 <span>
